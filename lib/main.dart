@@ -2,13 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
 
-  const MyApp({super.key});
+  MyApp({super.key});
   static const platform = MethodChannel('com.example.native_alert');
+
+  List names = ["Ash","Brook","Misty"];
 
   // This widget is the root of your application.
   @override
@@ -39,31 +41,12 @@ class MyApp extends StatelessWidget {
             }, icon: Icon(Icons.logout, color: Colors.white,))
           ],
         ),
-        body: Center(
-          child: Container(
-            height: 150,
-            width: 150,
-            padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10), //EdgeInsets.all(5),
-            decoration: BoxDecoration(
-              color: Colors.deepPurple,
-              borderRadius: BorderRadius.circular(12)
-            ),
-            // child: Text(
-            //   "Hi there this flutter",
-            //   textAlign: TextAlign.center,
-            //   style: TextStyle(
-            //     color: Colors.white,
-            //     fontWeight: FontWeight.bold,
-            //     fontSize: 16,
-            //   ),
-            // ),
-            child: Icon(
-              Icons.favorite,
-              size: 64,
-              color: Colors.white,
-            )
-          ),
-        )   
+        body: ListView.builder(
+          itemCount: names.length,
+          itemBuilder: (context, index) => ListTile(
+            title: Text(names[index]),
+          ))
+        
       )
     );
   }
