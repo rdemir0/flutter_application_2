@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_2/BuilderListView.dart';
-import 'package:flutter_application_2/CustomListView.dart';
-import 'package:flutter_application_2/ItemListview.dart';
+import 'package:flutter_application_2/Buttons/SquareButton.dart';
+import 'package:flutter_application_2/GridView/BuilderGridView.dart';
+import 'package:flutter_application_2/ListView/BuilderListView.dart';
+import 'package:flutter_application_2/ListView/CustomListView.dart';
+import 'package:flutter_application_2/GridView/ItemGridView.dart';
+import 'package:flutter_application_2/ListView/ItemListview.dart';
+import 'package:flutter_application_2/TapView/TapView.dart';
 
 void main() {
   runApp(MyApp());
@@ -27,7 +31,15 @@ class MyApp extends StatelessWidget {
           leading: Icon(Icons.menu, color: Colors.white),
           toolbarHeight: 60
         ),
-        body: Builderlistview() // Imported ItemListScreen in MyApp's body
+        body: Center(
+          child: SquareButton(
+            onPressed: () {
+              print('Button pressed!');
+            },
+            text: 'Press Me',
+          ),
+        ),
+
       ),
     );
   }
