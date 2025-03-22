@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-class SecondPage extends StatelessWidget {
-  const SecondPage({super.key});
+class ThirdPage extends StatelessWidget {
+  const ThirdPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blueGrey,
+      backgroundColor: Colors.green,
       appBar: AppBar(
         backgroundColor: Colors.blueAccent,
         title: Text(
@@ -21,9 +21,13 @@ class SecondPage extends StatelessWidget {
       body: Center(
       child: ElevatedButton(
         onPressed: () {
-          Navigator.pushNamed(context, "/third");
+          Navigator.pushNamedAndRemoveUntil(
+              context,
+              '/first',  // Navigate to the root, which is FirstPage
+              (route) => false, // This removes all previous routes from the stack
+            );
         },
-        child: Text('Go Third'),
+        child: Text('Go Root'),
       ),
     ),
     );
