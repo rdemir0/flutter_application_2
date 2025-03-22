@@ -13,6 +13,7 @@ void main() {
 
 
 class MyApp extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -33,9 +34,7 @@ class MyApp extends StatelessWidget {
         ),
         body: Center(
           child: SquareButton(
-            onPressed: () {
-              print('Button pressed!');
-            },
+            onPressed: squareButtonPressed,
             text: 'Press Me',
           ),
         ),
@@ -43,4 +42,10 @@ class MyApp extends StatelessWidget {
       ),
     );
   }
+
+
+  void squareButtonPressed(){
+    print('SquareButton pressed!');
+  }
+  
 }
