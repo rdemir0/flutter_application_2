@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/Buttons/SquareButton.dart';
 import 'package:flutter_application_2/GridView/BuilderGridView.dart';
@@ -5,6 +6,8 @@ import 'package:flutter_application_2/ListView/BuilderListView.dart';
 import 'package:flutter_application_2/ListView/CustomListView.dart';
 import 'package:flutter_application_2/GridView/ItemGridView.dart';
 import 'package:flutter_application_2/ListView/ItemListview.dart';
+import 'package:flutter_application_2/Pages/FirstPage.dart';
+import 'package:flutter_application_2/Pages/SecondPage.dart';
 import 'package:flutter_application_2/TapView/TapView.dart';
 
 void main() {
@@ -13,6 +16,12 @@ void main() {
 
 
 class MyApp extends StatelessWidget {
+  
+  void squareButtonPressed(){
+    if (kDebugMode) {
+      print('SquareButton pressed!');
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -20,32 +29,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: const Color.fromARGB(255, 142, 132, 161),
-        appBar: AppBar(
-          title: Text("My App"),
-          elevation: 20,
-          backgroundColor: Colors.deepPurpleAccent,
-          titleTextStyle: TextStyle(
-            color: Colors.white,
-            fontSize: 20,
-            fontWeight: FontWeight.w600,
-          ),
-          leading: Icon(Icons.menu, color: Colors.white),
-          toolbarHeight: 60
-        ),
-        body: Center(
-          child: SquareButton(
-            onPressed: squareButtonPressed,
-            text: 'Press Me',
-          ),
-        ),
-
+        body: FirstPage()
       ),
     );
-  }
-
-
-  void squareButtonPressed(){
-    print('SquareButton pressed!');
   }
   
 }
