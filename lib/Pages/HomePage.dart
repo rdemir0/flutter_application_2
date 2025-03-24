@@ -1,30 +1,28 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_2/Pages/SecondPage.dart';
 
-class FirstPage extends StatelessWidget {
-  const FirstPage({super.key});
+
+class HomePage extends StatelessWidget {
+  const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.amber,
+      backgroundColor: Colors.blueAccent[100],
       appBar: AppBar(
         backgroundColor: Colors.blueAccent,
         title: Text(
-          "1st Page",
+          "Home",
           style: TextStyle(
             fontSize: 22,
             color: Colors.white,
             fontWeight: FontWeight.bold
           ),
-        ),
+        )
       ),
       body: Center(
-        child: ElevatedButton(
-          onPressed: (){
-            Navigator.pushNamed(context, "/second");
-          }, 
-          child: Text("Go to 2nd Page")),
+        child: Text('Welcome!', style: TextStyle(
+          color: Colors.white, fontSize: 18
+        ),)
       ),
     );
   }

@@ -23,7 +23,7 @@ class ThirdPage extends StatelessWidget {
         onPressed: () {
           Navigator.pushNamedAndRemoveUntil(
               context,
-              '/first',  // Navigate to the root, which is FirstPage
+              '/drawer',  // Navigate to the root, which is FirstPage
               (route) => false, // This removes all previous routes from the stack
             );
         },
