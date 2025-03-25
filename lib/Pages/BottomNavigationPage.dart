@@ -22,9 +22,7 @@ class BottomNavigationPage extends StatefulWidget {
 
 class BottomNavigationState extends State<BottomNavigationPage> {
 
-
   final List pages = [HomePage(), ProfilePage(), SettingsPage()]; 
-
 
   var selectedTabIndex = 0;
 

@@ -6,6 +6,7 @@ import 'package:flutter_application_2/Components/ListView/CustomListView.dart';
 import 'package:flutter_application_2/Components/GridView/ItemGridView.dart';
 import 'package:flutter_application_2/Components/ListView/ItemListview.dart';
 import 'package:flutter_application_2/Pages/BottomNavigationPage.dart';
+import 'package:flutter_application_2/Pages/CounterPage.dart';
 import 'package:flutter_application_2/Pages/DrawerPage.dart';
 import 'package:flutter_application_2/Pages/HomePage.dart';
 import 'package:flutter_application_2/Pages/SecondPage.dart';
@@ -30,7 +31,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: BottomNavigationPage(),
+      home: CounterPage(),
       routes: {
         '/drawer': (context) => DrawerPage(),  // Route for the first page
         '/second': (context) => SecondPage(),  // Route for the second page
