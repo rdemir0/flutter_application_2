@@ -55,27 +55,3 @@ class CounterPageState extends State<CounterPage> {
     );
   }
 }
-
-/*
-class CounterPage extends StatelessWidget {
-  const CounterPage({super.key});
-
-  @override,
-  jkjkşj
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.limeAccent[100],
-      appBar: AppBar(
-        backgroundColor: Colors.lime,
-        title: Text("Counter Page",
-          style: TextStyle(
-            fontSize: 22,
-            color: Colors.white,
-            fontWeight: FontWeight.bold
-          ),
-        ),
-      ),
-    );
-  }
-}
- */

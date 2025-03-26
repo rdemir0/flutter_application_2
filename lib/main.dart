@@ -13,6 +13,7 @@ import 'package:flutter_application_2/Pages/SecondPage.dart';
 import 'package:flutter_application_2/Components/TapView/TapView.dart';
 import 'package:flutter_application_2/Pages/SettingsPage.dart';
 import 'package:flutter_application_2/Pages/ThirdPage.dart';
+import 'package:flutter_application_2/Pages/UserInputPage.dart';
 
 void main() {
   runApp(MyApp());
@@ -31,7 +32,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: CounterPage(),
+      home: UserInputPage(),
       routes: {
         '/drawer': (context) => DrawerPage(),  // Route for the first page
         '/second': (context) => SecondPage(),  // Route for the second page
